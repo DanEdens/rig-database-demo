@@ -23,19 +23,62 @@
 
 ## Nuntio [feature] demo
 
-This demo showcases [...].
+This demo showcases how Nuntio helps with managing databases. Specifically it showcases Nuntio operating with a MongoDB database.
 
 ## What is Nuntio?
 
 Nuntio is an open-source cloud development platform for Kubernetes. It features simple-to-use Capsule for Application deployments and batteries-included Modules for Auth, User-management, Storage and Databases.
 
 ## Prerequisites
+
 Nuntio must be running either locally in Docker or on a Kubernetes cluster. You can refer to [this guide](https://beta-docs.nuntio.io/get-started) to learn how to install Nuntio.
 
 ## Get started
-To run the demo locally, follow these steps: 
 
-### Step 1. Clone this repo and [...].
-[...]
+To run the demo locally, follow these steps:
 
-### Step 2: [...]
+### Step 1. Create a new Nuntio managed MongoDB database
+
+```
+nuntio database create --name our_db --type mongo
+```
+
+### Step 2: Add credentials to the newly created database
+
+```
+nuntio database create-credentials
+```
+
+And write `our_db` once it prompts for the DB identifier.
+Store the `clientID` and `secret` it outputs somewhere you can access later.
+
+### Step 3: Clone this repo and build a Docker image from it
+
+```
+git clone git@github.com:nuntiodev/database-demo.git
+cd database-demo
+docker build -t database-demo .
+```
+
+### Step 4: Create a new capsule and deploy the database-demo docker image to it
+
+```
+nuntio capsule create --name database-demo
+nuntio capsule create-build database-demo --image --database-demo --deploy
+```
+
+### Step 5: Automatically inject Nuntio client credentials and database credentials
+
+```
+nuntio capsule config database-demo --add-credentials
+```
+
+From the dashboard under the `settings` tab for your capsule, set the following environment variables from which the demo expects to read database name and credentials
+![image](https://i.imgur.com/LAIaB1E.png)
+
+### Step 6: Expose the port to the public which the application listens to
+
+`Network` in your capsule's dashboard
+![image](https://i.imgur.com/lAHNeA7.png)
+
+You should now be able to access the endpoints which the capsule implements on `localhost:3333/`
