@@ -9,8 +9,8 @@ import (
 	"os"
 
 	"github.com/bufbuild/connect-go"
-	"github.com/nuntiodev/nuntio-go-api/api/v1/database"
-	nuntio "github.com/nuntiodev/nuntio-go-sdk"
+	"github.com/rigdev/rig-go-api/api/v1/database"
+	rig "github.com/rigdev/rig-go-sdk"
 )
 
 const (
@@ -18,7 +18,7 @@ const (
 	_imagesTableName = "images"
 )
 
-var _apiKey = os.Getenv("NUNTIO_PROJECT_ID")
+var _apiKey = os.Getenv("RIG_PROJECT_ID")
 
 type Repository interface {
 	Setup(ctx context.Context) error
@@ -35,7 +35,7 @@ type dbConfig struct {
 	password string
 }
 
-var client nuntio.Client
+var client rig.Client
 var repo Repository
 
 func setupRepository(ctx context.Context) error {
@@ -122,7 +122,7 @@ func vote(ctx context.Context, w http.ResponseWriter, r *http.Request) error {
 }
 
 func main() {
-	client = nuntio.NewClient()
+	client = rig.NewClient()
 	ctx := context.Background()
 	if err := setupRepository(ctx); err != nil {
 		log.Fatal(err)
