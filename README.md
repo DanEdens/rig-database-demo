@@ -1,19 +1,19 @@
 <p align="center">
   <a href="https://rig.dev">
     <picture>
-      <img alt="Rig logo" src="https://github.com/rigdev/rig-go-api/assets/22043/d5981401-a9ac-42e4-b584-1b2718a47ea9" width="40%">
+      <img alt="Rig logo" src="https://github-production-user-asset-6210df.s3.amazonaws.com/22043/265044731-d8433e7b-4fe5-40ee-a2a2-bbfec9b26c63.svg" width="40%">
     </picture>
   </a>
 </p>
 <h2 align="center">
-  Rig [feature] demo
+  Rig database demo
 </h2>
 
 <h4 align="center">
-  <a href="...">Documentation</a>
+  <a href="https://docs.rig.dev">Documentation</a>
 </h4>
 <p align="center">
-  <a href="[https://twitter.com/intent/follow?screen_name=rig_dev](https://discord.com/invite/9KYQqpRpBN)">
+  <a href="[https://twitter.com/intent/follow?screen_name=rig_dev](https://discord.gg/Tn5wmXMM2U)">
     <img src="https://img.shields.io/discord/1076063204893012049" alt="Join us on Discord" />
   </a>
   <a href="https://twitter.com/intent/follow?screen_name=rig_dev">
