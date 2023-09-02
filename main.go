@@ -18,8 +18,6 @@ const (
 	_imagesTableName = "images"
 )
 
-var _apiKey = os.Getenv("RIG_PROJECT_ID")
-
 type Repository interface {
 	Setup(ctx context.Context) error
 	AddImage(ctx context.Context, url string) (image, error)
@@ -47,8 +45,8 @@ func setupRepository(ctx context.Context) error {
 	}
 
 	endpointResponse, err := client.Database().GetEndpoint(ctx, connect.NewRequest(&database.GetEndpointRequest{
-		DatabaseId:   dbResponse.Msg.Database.Id,
-		ClientID:     mongoConfig.username,
+		DatabaseId:   dbResponse.Msg.Database.DatabaseId,
+		ClientId:     mongoConfig.username,
 		ClientSecret: mongoConfig.password,
 	}))
 	if err != nil {

@@ -7,4 +7,4 @@ RUN go mod download && go mod verify
 
 COPY . .
 
-CMD ["go", "run", "./*.go"]
+CMD ["go", "run", "main.go", "mongo.go"]

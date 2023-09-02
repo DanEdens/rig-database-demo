@@ -5,8 +5,8 @@ go 1.20
 require (
 	github.com/bufbuild/connect-go v1.10.0
 	github.com/lib/pq v1.10.9
-	github.com/rigdev/rig-go-api v0.0.0-20230824085749-68c6da853d8d
-	github.com/rigdev/rig-go-sdk v0.0.0-20230823123721-9fd9a524d18f
+	github.com/rigdev/rig-go-api v0.0.0-20230901110907-d3cdf0db09f7
+	github.com/rigdev/rig-go-sdk v0.0.0-20230901134512-80f87a3c744d
 	go.mongodb.org/mongo-driver v1.12.1
 	golang.org/x/exp v0.0.0-20230817173708-d852ddb80c63
 )

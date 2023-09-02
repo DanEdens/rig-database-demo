@@ -13,17 +13,17 @@
   <a href="...">Documentation</a>
 </h4>
 <p align="center">
-  <a href="[https://twitter.com/intent/follow?screen_name=rig_io](https://discord.com/invite/9KYQqpRpBN)">
+  <a href="[https://twitter.com/intent/follow?screen_name=rig_dev](https://discord.com/invite/9KYQqpRpBN)">
     <img src="https://img.shields.io/discord/1076063204893012049" alt="Join us on Discord" />
   </a>
-  <a href="https://twitter.com/intent/follow?screen_name=rig_io">
-    <img src="https://img.shields.io/twitter/follow/rig_io?label=Follow%20@rig_io" alt="Follow @rig_io" />
+  <a href="https://twitter.com/intent/follow?screen_name=rig_dev">
+    <img src="https://img.shields.io/twitter/follow/rig_dev?label=Follow%20@rig_dev" alt="Follow @rig_dev" />
   </a>
 </p>
 
-## Rig [feature] demo
+## Rig database demo
 
-This demo showcases how Rig helps with managing databases. Specifically it showcases Rig operating with a MongoDB database.
+This demo showcases how Rig helps with managing databases. Specifically it showcases Rig operating with a MongoDB database. See [here](http://docs.rig.dev) for a more comprehensive walkthrough of the demo.
 
 ## What is Rig?
 
@@ -31,7 +31,7 @@ Rig is an open-source cloud development platform for Kubernetes. It features sim
 
 ## Prerequisites
 
-Rig must be running either locally in Docker or on a Kubernetes cluster. You can refer to [this guide](https://beta-docs.rig.dev/get-started) to learn how to install Rig.
+Rig must be running either locally in Docker or on a Kubernetes cluster. You can refer to [this guide](https://docs.rig.dev/get-started) to learn how to install Rig.
 
 ## Get started
 
@@ -71,6 +71,12 @@ rig capsule create-build database-demo --image --database-demo --deploy
 
 ```
 rig capsule config database-demo --add-credentials
+```
+
+Also add credentials to the database we created and copy the secret
+
+```
+rig database create-credentials our_db
 ```
 
 From the dashboard under the `settings` tab for your capsule, set the following environment variables from which the demo expects to read database name and credentials
