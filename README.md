@@ -31,7 +31,7 @@ Rig is an open-source cloud development platform for Kubernetes. It features sim
 
 ## Prerequisites
 
-Rig must be running either locally in Docker or on a Kubernetes cluster. You can refer to [this guide](https://docs.rig.dev/get-started) to learn how to install Rig.
+Rig must be running either locally in Docker or on a Kubernetes cluster. You can refer to [this guide](https://docs.rig.dev/getting-started) to learn how to install Rig.
 
 ## Get started
 
